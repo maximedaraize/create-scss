@@ -1,10 +1,10 @@
 {
-  "name": "this-is-a-test-packages",
+  "name": "create-scss",
   "version": "1.0.0",
   "config": {
     "path": "../"
   },
-  "description": "simple test to publish npm packages",
+  "description": "A starter template with scss structure, dependencies, scipt for developement and production",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,13 +14,15 @@
     "url": "git+https://github.com/maximedaraize/npm-test-delete.git"
   },
   "keywords": [
-    "npm",
-    "test"
+    "template",
+    "css",
+    "scss",
+    "sass"
   ],
   "author": "Maxime Daraize",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maximedaraize/npm-test-delete/issues"
+    "url": "https://github.com/maximedaraize/create-scss/issues"
   },
-  "homepage": "https://github.com/maximedaraize/npm-test-delete#readme"
+  "homepage": "https://github.com/maximedaraize/create-scss#readme"
 }
