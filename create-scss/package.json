@@ -14,7 +14,8 @@
     "template",
     "css",
     "scss",
-    "sass"
+    "sass",
+    "starter"
   ],
   "author": "Maxime Daraize",
   "license": "ISC",
