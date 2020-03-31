@@ -1,10 +1,19 @@
 {
   "name": "create-scss",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "A starter template with scss structure, dependencies, scipt for developement and production",
   "main": "index.js",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "node-sass": "^4.13.0",
+    "postcss-cli": "^7.1.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "node-sass scss/main.scss css/style.css --watch",
+    "compile": "node-sass scss/main.scss css/style.css",
+    "prefix": "postcss css/style.css --use autoprefixer -b 'last 2 versions' -o css/style.css",
+    "compress": "postcss --use cssnano --output css/style.mini.css css/style.css"
   },
   "repository": {
     "type": "git",

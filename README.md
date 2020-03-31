@@ -7,6 +7,14 @@ A starter template with scss structure, dependencies, script for developement an
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [Scripts](#scripts)
+4. [Version](#version)
+
+## Version
+
+### Version 1.1.0
+
+In this version, dependencies are add to package.json. Scripts are define in package.json to compile
+scss into css, add vendor prefixes and to compress css file.
 
 ## Installation
 
