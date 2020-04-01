@@ -1,6 +1,6 @@
 # Create-scss
 
-A starter template with scss structure, dependencies, script for developement and production
+A starter template with scss directory structure, dependencies, script for developement and production. A quick and easy way to create and organise your code.
 
 ## Table of Contents
 

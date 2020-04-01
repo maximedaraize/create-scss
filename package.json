@@ -1,7 +1,7 @@
 {
   "name": "create-scss",
   "version": "1.1.1",
-  "description": "A starter template with scss structure, dependencies, scipt for developement and production",
+  "description": "A starter template with scss directory structure, dependencies, scipt for developement and production",
   "main": "index.js",
   "devDependencies": {
     "autoprefixer": "^9.7.4",
@@ -24,7 +24,9 @@
     "css",
     "scss",
     "sass",
-    "starter"
+    "starter",
+    "directory",
+    "structure"
   ],
   "author": "Maxime Daraize",
   "license": "ISC",
