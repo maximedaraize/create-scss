@@ -1,7 +1,7 @@
 {
   "name": "create-scss",
-  "version": "1.1.0",
-  "description": "A starter template with scss structure, dependencies, scipt for developement and production",
+  "version": "1.1.1",
+  "description": "A starter template with scss directory structure, dependencies, scipt for developement and production",
   "main": "index.js",
   "devDependencies": {
     "autoprefixer": "^9.7.4",
@@ -17,14 +17,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maximedaraize/npm-test-delete.git"
+    "url": "git+https://github.com/maximedaraize/create-scss"
   },
   "keywords": [
     "template",
     "css",
     "scss",
     "sass",
-    "starter"
+    "starter",
+    "directory",
+    "structure"
   ],
   "author": "Maxime Daraize",
   "license": "ISC",
