@@ -1,4 +1,4 @@
-# Create-scss
+# # Create-scss
 
 A starter template with scss directory structure, dependencies, script for developement and production. A quick and easy way to create and organise your code.
 
@@ -62,6 +62,11 @@ create-scss
 ```
 
 ## Version
+
+### Version 1.1.2
+
+- Add 4 mixins in abstracts/\_mixins.scss file
+- Format LICENSE
 
 ### Vesion 1.1.1
 
