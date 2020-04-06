@@ -63,6 +63,21 @@ create-scss
 
 ## Version
 
+### Version 1.1.4
+
+- Simplify documentation
+- Add mixins for breakpoints
+
+usage example :
+
+```bash
+.header {
+  @include for(small) {
+    width: 100%;
+  }
+}
+```
+
 ### Version 1.1.3
 
 - Dependencies are now installed at the same time as this package
@@ -98,8 +113,6 @@ npm i create-scss
 
 Move the **scss folder** to the root of your project.
 
-
-
 ### The dependencies of the package.json are:
 
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer)
@@ -128,13 +141,14 @@ To use those scripts you need to place them inside your package.json. Look insid
 ### Create a package.json file
 
 If you dont have a package.json at the root of your project.
- 1. open a terminal and type -> **npm init**
+
+1. open a terminal and type -> **npm init**
 
 2. Answer the questions in the command line questionnaire.
 
 3. And Voilà
 
-you should now have a package.json that look like this: 
+you should now have a package.json that look like this:
 
 ```bash
 {
@@ -160,9 +174,9 @@ you should now have a package.json that look like this:
     "prefix": "postcss css/style.css --use autoprefixer -b 'last 2 versions' -o css/style.css",
     "compress": "postcss --use cssnano --output css/style.mini.css css/style.css"
   },
-  ```
+```
 
-  5. You can now use the command below !
+5. You can now use the command below !
 
 ##### To compile your scss into css run the command
 

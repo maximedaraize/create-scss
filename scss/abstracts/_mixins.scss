@@ -38,3 +38,53 @@ Put all your mixins in this file
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+//BREAKPOINTS
+
+@mixin for($size) {
+  //under 480px
+  @if $size == mobile-only {
+    @media (max-width: 480px) {
+      @content;
+    }
+    //over 481px
+  } @else if $size == mobile {
+    @media (min-width: 481px) {
+      @content;
+    }
+    //under 767px
+  } @else if $size == small-only {
+    @media (max-width: 767px) {
+      @content;
+    }
+    //over 768px
+  } @else if $size == small {
+    @media (min-width: 768px) {
+      @content;
+    }
+    //under 991px
+  } @else if $size == medium-only {
+    @media (max-width: 991px) {
+      @content;
+    }
+    //over 992px
+  } @else if $size == medium {
+    @media (min-width: 992px) {
+      @content;
+    }
+    //between 992px and 1199px
+  } @else if $size == large-only {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+    //over 1200px
+  } @else if $size == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $size == mobile-only-medium-only {
+    @media (max-width: 480px), (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  }
+}
