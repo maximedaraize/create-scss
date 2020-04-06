@@ -63,11 +63,6 @@ create-scss
 
 ## Version
 
-### Version 1.1.3
-
-- Dependencies are now installed at the same time as this package
-- Fix typo in package.json
-
 ### Version 1.1.2
 
 - Add 4 mixins in abstracts/\_mixins.scss file
@@ -96,11 +91,24 @@ or via NPM
 npm i create-scss
 ```
 
-Move the **scss folder** to the root of your project.
+Copy what is inside that package to the root of your project.
 
+You should have at the root of your project:
 
+- folder name **scss**
+- .gitignore file
+- .npmignore file
+- package.json file
+- README.md file
+- LICENSE file
 
-### The dependencies of the package.json are:
+Install dependencies to compile your **scss** into **css** by running the next command in your terminal
+
+```bash
+npm install
+```
+
+### The dependencies inside the package.json are:
 
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer)
 - [cssnano](https://www.npmjs.com/package/cssnano)
@@ -123,66 +131,25 @@ The goal of this package is to help create a quick folder structure for your pro
 
 ## Scripts
 
-To use those scripts you need to place them inside your package.json. Look inside the package.json file inside **create-scss** to see how they are used, or move that file are the root of your project.
-
-### Create a package.json file
-
-If you dont have a package.json at the root of your project.
- 1. open a terminal and type -> **npm init**
-
-2. Answer the questions in the command line questionnaire.
-
-3. And Voilà
-
-you should now have a package.json that look like this: 
-
-```bash
-{
-  "name": "name_of_your_project",
-  "version": "1.0.0",
-  "description": "description of your project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "your name",
-  "license": "ISC"
-}
-
-```
-
-4. Replace the script section by this:
-
-```bash
-"scripts": {
-    "watch": "node-sass scss/main.scss css/style.css --watch",
-    "compile": "node-sass scss/main.scss css/style.css",
-    "prefix": "postcss css/style.css --use autoprefixer -b 'last 2 versions' -o css/style.css",
-    "compress": "postcss --use cssnano --output css/style.mini.css css/style.css"
-  },
-  ```
-
-  5. You can now use the command below !
-
-##### To compile your scss into css run the command
+To compile your scss into css run the command
 
 ```bash
 npm run compile
 ```
 
-##### To compile your scss into css run everytime you save run the command
+To compile your scss into css run everytime you save run the command
 
 ```bash
 npm run watch
 ```
 
-##### To add vendor prefixes to your compiled css run the command
+To add vendor prefixes to your compiled css run the command
 
 ```bash
 npm run prefix
 ```
 
-##### To compress your compiled css run the command
+To compress your compiled css run the command
 
 ```bash
 npm run compress
