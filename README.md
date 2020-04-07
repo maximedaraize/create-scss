@@ -63,6 +63,11 @@ create-scss
 
 ## Version
 
+## Version 1.1.5
+
+- Adjust REAME.md
+- Fix typos in package.json
+
 ### Version 1.1.4
 
 - Simplify documentation
@@ -71,9 +76,11 @@ create-scss
 usage example :
 
 ```bash
-.header {
+//.article will have a width of 50% when the browser window is 768px or bigger
+
+.article {
   @include for(small) {
-    width: 100%;
+    width: 50%;
   }
 }
 ```
@@ -94,7 +101,7 @@ Fix typos in package.json and improve documentation in README.md
 
 ### Version 1.1.0
 
-In this version, dependencies are add to package.json. Scripts are define in package.json to compile
+In this version, Devdependencies are add to package.json. Scripts are define in package.json to compile
 scss into css, add vendor prefixes and to compress css file.
 
 ## Installation
