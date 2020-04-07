@@ -63,7 +63,7 @@ create-scss
 
 ## Version
 
-## Version 1.1.5
+### Version 1.1.5
 
 - Adjust REAME.md
 - Fix typos in package.json
