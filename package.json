@@ -1,6 +1,6 @@
 {
   "name": "create-scss",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A starter template with scss directory structure, dependencies, script for developement and production",
   "main": "index.js",
   "dependencies": {
@@ -30,7 +30,7 @@
     "structure"
   ],
   "author": "Maxime Daraize",
-  "license": "MTI",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/maximedaraize/create-scss/issues"
   },
