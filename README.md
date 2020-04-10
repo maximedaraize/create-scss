@@ -63,6 +63,10 @@ create-scss
 
 ## Version
 
+### Version 1.2.1
+
+- Fix important typo in index.js that make scripts unusable
+
 ### Version 1.2.0
 
 - Copy scss directory at root level
