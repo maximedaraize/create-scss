@@ -1,4 +1,8 @@
-# # Create-scss
+# Create-scss
+
+![npm version](https://img.shields.io/npm/v/create-scss)
+![npm license](https://img.shields.io/npm/l/create-scss?color=%23dd2200)
+![npm downloads](https://img.shields.io/npm/dw/create-scss)
 
 A starter template with scss directory structure, dependencies, script for developement and production. A quick and easy way to create and organise your code.
 
