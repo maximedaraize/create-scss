@@ -63,6 +63,10 @@ create-scss
 
 ## Version
 
+### Version 1.2.0
+
+- Copy scss directory at root level
+
 ### Version 1.1.5
 
 - Adjust REAME.md
