@@ -4,27 +4,21 @@
 ![npm license](https://img.shields.io/npm/l/create-scss?color=%23dd2200)
 ![npm downloads](https://img.shields.io/npm/dw/create-scss)
 
+### A quick and easy way to add a scss directory structure to your projet :zap:
+
 A starter template with scss directory structure, dependencies, script for developement and production. A quick and easy way to create and organise your code.
 
 ## Table of Contents
 
-1. [Structure](#structure)
-2. [Version](#version)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Scripts](#scripts)
+1. [Version](#version)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Scripts](#scripts)
 
 ## Structure
 
 ```bash
-create-scss
-    ├── LICENSE
-    ├── README.md
-    ├── package.json
-    ├── .gitignore
-    ├── .npmignore
-    │
-    └── scss
+     scss
         │
         ├── abstracts
         │   ├── functions.scss
@@ -67,6 +61,11 @@ create-scss
 
 ## Version
 
+### Version 1.2.2
+
+- Change npm scripts inside package.json
+- Remove (name ) dependency
+
 ### Version 1.2.1
 
 - Fix important typo in index.js that make scripts unusable
@@ -74,6 +73,7 @@ create-scss
 ### Version 1.2.0
 
 - Copy scss directory at root level
+- Add fs-extra dependency
 
 ### Version 1.1.5
 
@@ -118,30 +118,19 @@ scss into css, add vendor prefixes and to compress css file.
 
 ## Installation
 
-You can either install it by cloning the repo inside your project
-
-```bash
-git clone https://github.com/maximedaraize/create-scss
-```
-
-or via NPM
-
 ```bash
 npm i create-scss
 ```
 
-Move the **scss folder** to the root of your project.
-
-### The dependencies of the package.json are:
+#### Dependencies installed with this package
 
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer)
 - [cssnano](https://www.npmjs.com/package/cssnano)
 - [node-sass](https://www.npmjs.com/package/node-sass)
 - [postcss-cli](https://www.npmjs.com/package/postcss-cli)
+- [fs-extra](https://www.npmjs.com/package/fs-extra)
 
 ## Usage
-
-The goal of this package is to help create a quick folder structure for your projetcs. Do not hesitate to change the structure by adding or removing files.
 
 - All file should be imported in **main.scss**
 - All partial file should strart with an underscore. (_\_name-of-partial.scss_)
@@ -151,11 +140,12 @@ The goal of this package is to help create a quick folder structure for your pro
   @import "abstracts/variables";
   ```
 
-- Compile scss will be found in a folder named **css** at the same level of **scss** folder
+- Compile scss will be found in a folder named **css** at the same level of the **scss** folder
+- You can compile your scss with any tool you want, but all you need is already installed with this package. **Read the Scripts section to add useful commands to your package.json**
 
 ## Scripts
 
-To use those scripts you need to place them inside your package.json. Look inside the package.json file inside **create-scss** to see how they are used, or move that file are the root of your project.
+To use those scripts you need to place them inside your package.json. Look inside the package.json file inside **create-scss** to see how they are used.
 
 ### Create a package.json file
 
@@ -165,7 +155,7 @@ If you dont have a package.json at the root of your project.
 
 2. Answer the questions in the command line questionnaire.
 
-3. And Voilà
+3. And Voilà :tada:
 
 you should now have a package.json that look like this:
 
@@ -184,7 +174,7 @@ you should now have a package.json that look like this:
 
 ```
 
-4. Replace the script section by this:
+4. Replace the **scripts** section by this :balloon: :
 
 ```bash
 "scripts": {
@@ -220,3 +210,12 @@ npm run prefix
 ```bash
 npm run compress
 ```
+
+## Author
+
+#### Maxime Daraize
+
+[Github](https://github.com/maximedaraize/)
+[Codepen](https://codepen.io/maximedaraize)
+
+#### If you like this project, give it a :star:
