@@ -1,27 +1,27 @@
-/**
-Do not change the order of those files
-*/
+//=======================================
+// Do not change the order of those files
+//=======================================
 
-/*** ABSTRACT ***/
+// ABSTRACT
 @import "abstracts/variables";
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/helpers";
 
-/*** BASE ***/
+// BASE
 @import "base/reset";
 @import "base/global";
 @import "base/shame";
 @import "base/typography";
 
-/*** LAYOUT ***/
+// LAYOUT
 @import "layout/grid";
 @import "layout/navigation";
 @import "layout/header";
 @import "layout/sidebar";
 @import "layout/footer";
 
-/*** COMPONENTS ***/
+// COMPONENTS
 @import "components/breadcrumb";
 @import "components/buttons";
 @import "components/forms";
@@ -29,8 +29,8 @@ Do not change the order of those files
 @import "components/menu";
 @import "components/progressbar";
 
-/*** PAGES ***/
+// PAGES
 @import "pages/home";
 
-/*** THEMES ***/
+// THEMES
 @import "themes/theme";
