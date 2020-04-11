@@ -1,7 +1,7 @@
 # CREATE SCSS
 
 ![npm version](https://img.shields.io/npm/v/create-scss)
-![npm license](https://img.shields.io/npm/l/create-scss?color=%23dd2200)
+![npm license](https://img.shields.io/npm/l/create-scss?color=%2321bab3)
 ![npm downloads](https://img.shields.io/npm/dw/create-scss)
 
 ### A quick and easy way to add a scss directory structure to your projet :zap:
@@ -10,11 +10,10 @@ A starter template with scss directory structure, dependencies, scripts for deve
 
 ## Table of Contents
 
-1. [Installation](#installation)
-2. [Usage](#usage)
-3. [Scripts](#scripts)
+1. [Structure](#structure)
+2. [Installation](#installation)
+3. [Usage](#usage)
 4. [Contribution and support](#contribution)
-5. [Author](#author)
 
 ## Structure
 
