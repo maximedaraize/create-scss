@@ -102,7 +102,7 @@ npm run build
 
 ## Contribution
 
-If you want to contribute to this project go to the [create-scss repo](https://github.com/maximedaraize/create-scss/) and open an issue :v:
+If you want to contribute to this project go to the [create-scss repo](https://github.com/maximedaraize/create-scss/issues) and open an issue :v:
 
 Show your support be giving a :star: to this project
 
