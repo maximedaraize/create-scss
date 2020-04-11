@@ -16,7 +16,7 @@
     "prefix": "postcss css/style.comp.css --use autoprefixer -b 'last 4 versions' -o css/style.prefix.css",
     "compress": "node-sass css/style.prefix.css css/style.mini.css --output-style compressed",
     "build": "npm-run-all compile prefix compress",
-    "postinstall": "node postinstall.js"
+    "postinstall": "node index.js"
   },
   "repository": {
     "type": "git",
