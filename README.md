@@ -10,10 +10,10 @@ A starter template with scss directory structure, dependencies, script for devel
 
 ## Table of Contents
 
-1. [Version](#version)
-2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Scripts](#scripts)
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Scripts](#scripts)
+4. [Version](#version)
 
 ## Structure
 
@@ -57,6 +57,95 @@ A starter template with scss directory structure, dependencies, script for devel
         │
         └── main.scss
 
+```
+
+## Installation
+
+```bash
+npm i create-scss
+```
+
+#### Dependencies installed with this package
+
+- [node-sass](https://www.npmjs.com/package/node-sass)
+- [postcss-cli](https://www.npmjs.com/package/postcss-cli)
+- [autoprefixer](https://www.npmjs.com/package/autoprefixer)
+- [npm-run-all](https://www.npmjs.com/package/npm-run-all)
+- [fs-extra](https://www.npmjs.com/package/fs-extra)
+
+## Usage
+
+After the installation you can use any tool to compile your sass into css, but if you want to make the best out of this pacakge, use the scripts below.
+
+### Steps
+
+1. You need a package.json file a the root of your project. To do so, just enter the next command into your terminal :
+
+```bash
+npm init
+```
+
+2. Answer the questions in the command line questionnaire.
+
+3. And Voilà :tada:
+
+You should now have a package.json that look like this:
+
+```bash
+{
+  "name": "name_of_your_project",
+  "version": "1.0.0",
+  "description": "description of your project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "your name",
+  "license": "ISC"
+}
+
+```
+
+4. Replace the **scripts** section by this :balloon: :
+
+```bash
+"dependencies": {
+    "autoprefixer": "^9.7.4",
+    "fs-extra": "^9.0.0",
+    "node-sass": "^4.13.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0"
+  },
+  "scripts": {
+    "watch": "node-sass scss/main.scss css/style.css --watch",
+    "compile": "node-sass scss/main.scss css/style.comp.css",
+    "prefix": "postcss css/style.comp.css --use autoprefixer -b 'last 4 versions' -o css/style.prefix.css",
+    "compress": "node-sass css/style.prefix.css css/style.mini.css --output-style compressed",
+    "build": "npm-run-all compile prefix compress",
+  },
+```
+
+## Scripts
+
+##### To compile your scss into css run everytime you save run the command
+
+```bash
+//output style.css
+npm run watch
+```
+
+##### To compile your scss into css run the command
+
+```bash
+//output style.comp.css
+npm run compile
+```
+
+##### To make your css ready for production (it will compile, prefix and compress your scss).
+
+```bash
+//output style.mini.css
+npm run build
 ```
 
 ## Version
@@ -115,101 +204,6 @@ Fix typos in package.json and improve documentation in README.md
 
 In this version, Devdependencies are add to package.json. Scripts are define in package.json to compile
 scss into css, add vendor prefixes and to compress css file.
-
-## Installation
-
-```bash
-npm i create-scss
-```
-
-#### Dependencies installed with this package
-
-- [autoprefixer](https://www.npmjs.com/package/autoprefixer)
-- [cssnano](https://www.npmjs.com/package/cssnano)
-- [node-sass](https://www.npmjs.com/package/node-sass)
-- [postcss-cli](https://www.npmjs.com/package/postcss-cli)
-- [fs-extra](https://www.npmjs.com/package/fs-extra)
-
-## Usage
-
-- All file should be imported in **main.scss**
-- All partial file should strart with an underscore. (_\_name-of-partial.scss_)
-- In main.scss you dont need the underscore & the file extension when importing a partial. See below
-
-  ```scss
-  @import "abstracts/variables";
-  ```
-
-- Compile scss will be found in a folder named **css** at the same level of the **scss** folder
-- You can compile your scss with any tool you want, but all you need is already installed with this package. **Read the Scripts section to add useful commands to your package.json**
-
-## Scripts
-
-To use those scripts you need to place them inside your package.json. Look inside the package.json file inside **create-scss** to see how they are used.
-
-### Create a package.json file
-
-If you dont have a package.json at the root of your project.
-
-1. open a terminal and type -> **npm init**
-
-2. Answer the questions in the command line questionnaire.
-
-3. And Voilà :tada:
-
-you should now have a package.json that look like this:
-
-```bash
-{
-  "name": "name_of_your_project",
-  "version": "1.0.0",
-  "description": "description of your project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "your name",
-  "license": "ISC"
-}
-
-```
-
-4. Replace the **scripts** section by this :balloon: :
-
-```bash
-"scripts": {
-    "watch": "node-sass scss/main.scss css/style.css --watch",
-    "compile": "node-sass scss/main.scss css/style.css",
-    "prefix": "postcss css/style.css --use autoprefixer -b 'last 2 versions' -o css/style.css",
-    "compress": "postcss --use cssnano --output css/style.mini.css css/style.css"
-  },
-```
-
-5. You can now use the command below !
-
-##### To compile your scss into css run the command
-
-```bash
-npm run compile
-```
-
-##### To compile your scss into css run everytime you save run the command
-
-```bash
-npm run watch
-```
-
-##### To add vendor prefixes to your compiled css run the command
-
-```bash
-npm run prefix
-```
-
-##### To compress your compiled css run the command
-
-```bash
-npm run compress
-```
 
 ## Author
 
