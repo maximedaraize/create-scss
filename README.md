@@ -1,4 +1,4 @@
-# Create-scss
+# CREATE SCSS
 
 ![npm version](https://img.shields.io/npm/v/create-scss)
 ![npm license](https://img.shields.io/npm/l/create-scss?color=%23dd2200)
@@ -61,26 +61,26 @@ A starter template with scss directory structure, dependencies, script for devel
 
 ## Version
 
-### Version 1.2.2
+#### Version 1.2.2
 
 - Change npm scripts inside package.json
 - Remove (name ) dependency
 
-### Version 1.2.1
+#### Version 1.2.1
 
 - Fix important typo in index.js that make scripts unusable
 
-### Version 1.2.0
+#### Version 1.2.0
 
 - Copy scss directory at root level
 - Add fs-extra dependency
 
-### Version 1.1.5
+#### Version 1.1.5
 
 - Adjust REAME.md
 - Fix typos in package.json
 
-### Version 1.1.4
+#### Version 1.1.4
 
 - Simplify documentation
 - Add mixins for breakpoints
@@ -97,21 +97,21 @@ usage example :
 }
 ```
 
-### Version 1.1.3
+#### Version 1.1.3
 
 - Dependencies are now installed at the same time as this package
 - Fix typo in package.json
 
-### Version 1.1.2
+#### Version 1.1.2
 
 - Add 4 mixins in abstracts/\_mixins.scss file
 - Format LICENSE
 
-### Vesion 1.1.1
+#### Vesion 1.1.1
 
 Fix typos in package.json and improve documentation in README.md
 
-### Version 1.1.0
+#### Version 1.1.0
 
 In this version, Devdependencies are add to package.json. Scripts are define in package.json to compile
 scss into css, add vendor prefixes and to compress css file.
