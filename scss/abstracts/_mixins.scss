@@ -1,6 +1,6 @@
-/**
-Put all your mixins in this file
-*/
+//============
+// Mixins
+//============
 
 //add overlay on element, between () is the color of the overlay
 @mixin overlay($color, $opacity) {
