@@ -1,7 +1,7 @@
 {
   "name": "create-scss",
-  "version": "1.2.2",
-  "description": "A starter template with scss directory structure, dependencies, script for developement and production",
+  "version": "2.0.0",
+  "description": "A starter template with scss directory structure, dependencies, scripts for developement and production",
   "main": "index.js",
   "dependencies": {
     "autoprefixer": "^9.7.4",
@@ -16,7 +16,7 @@
     "prefix": "postcss css/style.comp.css --use autoprefixer -b 'last 4 versions' -o css/style.prefix.css",
     "compress": "node-sass css/style.prefix.css css/style.mini.css --output-style compressed",
     "build": "npm-run-all compile prefix compress",
-    "postinstall": "node index.js"
+    "postinstall": "node postinstall.js"
   },
   "repository": {
     "type": "git",
