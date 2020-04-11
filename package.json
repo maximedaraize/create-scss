@@ -1,22 +1,22 @@
 {
   "name": "create-scss",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A starter template with scss directory structure, dependencies, script for developement and production",
   "main": "index.js",
   "dependencies": {
     "autoprefixer": "^9.7.4",
-    "cssnano": "^4.1.10",
     "fs-extra": "^9.0.0",
     "node-sass": "^4.13.0",
+    "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.0"
   },
-  "devDependencies": {},
   "scripts": {
     "watch": "node-sass scss/main.scss css/style.css --watch",
-    "compile": "node-sass scss/main.scss css/style.css",
-    "prefix": "postcss css/style.css --use autoprefixer -b 'last 2 versions' -o css/style.css",
-    "compress": "postcss --use cssnano --output css/style.mini.css css/style.css",
-    "postinstall": "node index.js"
+    "compile": "node-sass scss/main.scss css/style.comp.css",
+    "prefix": "postcss css/style.comp.css --use autoprefixer -b 'last 4 versions' -o css/style.prefix.css",
+    "compress": "node-sass css/style.prefix.css css/style.mini.css --output-style compressed",
+    "build": "npm-run-all compile prefix compress",
+    "postinstall": "node postinstall.js"
   },
   "repository": {
     "type": "git",

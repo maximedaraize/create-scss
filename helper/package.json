@@ -1,0 +1,23 @@
+{
+  "name": "name-of-your-projet",
+  "version": "1.0.0",
+  "description": "short description of your project",
+  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "^9.7.4",
+    "fs-extra": "^9.0.0",
+    "node-sass": "^4.13.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "watch": "node-sass scss/main.scss css/style.css --watch",
+    "compile": "node-sass scss/main.scss css/style.comp.css",
+    "prefix": "postcss css/style.comp.css --use autoprefixer -b 'last 4 versions' -o css/style.prefix.css",
+    "compress": "node-sass css/style.prefix.css css/style.mini.css --output-style compressed",
+    "build": "npm-run-all compile prefix compress"
+  },
+  "author": "Your name",
+  "license": "MIT"
+}
