@@ -1,6 +1,6 @@
 {
   "name": "create-scss",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A starter template with scss directory structure, dependencies, scripts for developement and production",
   "main": "index.js",
   "dependencies": {
