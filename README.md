@@ -13,8 +13,8 @@ A starter template with scss directory structure, dependencies, scripts for deve
 1. [Structure](#structure)
 2. [Installation](#installation)
 3. [Usage](#usage)
-4. [Contribution and support](#contribution)
-5. [Version](#version)
+4. [Version](#version)
+5. [Contribution and support](#contribution)
 
 ## Structure
 
@@ -103,7 +103,7 @@ npm run build
 
 ## Version
 
-### 2.0.4
+### 2.0.5
 
 - Add reset styles to the package. box-sizing, remove list-style, images are responsive by default, font-size is set to 16px, etc...
 
