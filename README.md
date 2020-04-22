@@ -34,12 +34,16 @@ A starter template with scss directory structure, dependencies, scripts for deve
         │   └── typography.scss
         │
         ├── components
-        │   ├── breadcrumb.scss
+        │   ├── alert.scss
+        │   ├── banner.scss
         │   ├── buttons.scss
+        │   ├── card.scss
         │   ├── forms.scss
         │   ├── icons.scss
         │   ├── menu.scss
-        │   └── progressbar.scss
+        │   ├── modal.scss
+        │   ├── progress.scss
+        │   └── table.scss
         │
         ├── layout
         │   ├── footer.scss
@@ -102,6 +106,10 @@ npm run build
 ```
 
 ## Version
+
+### 2.1.1
+
+- Update directory structure in README base on version 2.1.0
 
 ### 2.1.0
 
