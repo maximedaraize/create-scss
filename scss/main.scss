@@ -4,15 +4,15 @@
 
 // ABSTRACT
 @import "abstracts/variables";
-@import "abstracts/functions";
 @import "abstracts/mixins";
+@import "abstracts/functions";
 @import "abstracts/helpers";
 
 // BASE
 @import "base/reset";
 @import "base/global";
-@import "base/shame";
 @import "base/typography";
+@import "base/shame";
 
 // LAYOUT
 @import "layout/grid";
@@ -22,12 +22,17 @@
 @import "layout/footer";
 
 // COMPONENTS
-@import "components/breadcrumb";
+@import "components/alert";
+@import "components/banner";
 @import "components/buttons";
+@import "components/card";
 @import "components/forms";
 @import "components/icons";
 @import "components/menu";
-@import "components/progressbar";
+@import "components/table";
+@import "components/modal";
+@import "components/progress";
+@import "components/table";
 
 // PAGES
 @import "pages/home";
