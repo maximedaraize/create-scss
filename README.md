@@ -103,15 +103,16 @@ npm run build
 
 ## Version
 
-### 2.0.5
+### 2.1.0
 
-- Add reset styles to the package. box-sizing, remove list-style, images are responsive by default, font-size is set to 16px, etc...
+- Add new partials in components directory. (\_alert.scss, \_banner.scss, \_card.scss, \_modal.scss)
+- Rename \_progressbar.scss by \_progress.scss
 
 ## Contribution
 
 If you want to contribute to this project go to the [create-scss repo](https://github.com/maximedaraize/create-scss/issues) and open an issue :v:
 
-Show your support be giving a :star: to this project
+Show your support be giving a :star: on [Github](https://github.com/maximedaraize/create-scss)
 
 ## Author
 
