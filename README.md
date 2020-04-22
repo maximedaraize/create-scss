@@ -105,7 +105,8 @@ npm run build
 
 ### 2.1.0
 
-- Add new partials in components directory. (\_alert.scss, \_banner.scss, \_card.scss, \_modal.scss)
+- Add new partials in components directory. ( \_alert.scss, \_banner.scss, \_card.scss, \_modal.scss )
+- Remove \_breadcrums.scss
 - Rename \_progressbar.scss by \_progress.scss
 
 ## Contribution
