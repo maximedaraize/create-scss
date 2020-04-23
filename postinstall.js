@@ -1,3 +1,6 @@
+//Copy the scss folder to the root of the prokect when install by NPM
+//Copy a starter package.json from helper to the root of project when install by NPM
+
 const fs = require("fs-extra");
 
 // Async/Await:
