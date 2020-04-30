@@ -1,5 +1,6 @@
-![create scss logo](https://res.cloudinary.com/mdaraize/image/upload/v1588286427/Logo-maxime_E2_hspxgq.svg)
+![create scss logo](https://res.cloudinary.com/mdaraize/image/upload/c_scale,q_100,w_508/v1588286427/Logo-maxime_E2_hspxgq.svg)
 
+</br>
 ![npm version](https://img.shields.io/npm/v/create-scss)
 ![npm license](https://img.shields.io/npm/l/create-scss?color=%2321bab3)
 ![npm downloads](https://img.shields.io/npm/dm/create-scss)
