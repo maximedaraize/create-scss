@@ -109,13 +109,17 @@ npm run build
 
 ## Version
 
+### 2.1.2
+
+- minor fixes
+
 ### 2.1.1
 
-- Update directory structure in README base on version 2.1.0
+- minor fixes
 
 ### 2.1.0
 
-- Add new partials in components directory. ( \_alert.scss, \_banner.scss, \_card.scss, \_modal.scss, \_table.scss )
+- Add new partials in components directory
 - Remove \_breadcrums.scss
 - Rename \_progressbar.scss by \_progress.scss
 - Reorganize main.scss
