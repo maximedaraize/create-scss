@@ -1,8 +1,8 @@
-# CREATE SCSS
+![create scss logo](https://res.cloudinary.com/mdaraize/image/upload/v1588286427/Logo-maxime_E2_hspxgq.svg)
 
 ![npm version](https://img.shields.io/npm/v/create-scss)
 ![npm license](https://img.shields.io/npm/l/create-scss?color=%2321bab3)
-![npm downloads](https://img.shields.io/npm/dw/create-scss)
+![npm downloads](https://img.shields.io/npm/dm/create-scss)
 
 ### A quick and easy way to add a scss directory structure to your projet :zap:
 
