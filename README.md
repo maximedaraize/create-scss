@@ -74,6 +74,8 @@ npm i create-scss
 
 You should find a scss directory and a package.json at the root of your project. All depedencies you need to compile you scss are located on **node_modules** folder.
 
+- Add the scripts in cs-scripts.json to the scripts object in your package.json file.
+
 #### Dependencies installed with this package
 
 - [node-sass](https://www.npmjs.com/package/node-sass)
@@ -108,6 +110,10 @@ npm run build
 ```
 
 ## Version
+
+### 2.2.1
+
+- Prevent package.json to be overwrited by installation
 
 ### 2.1.2
 
