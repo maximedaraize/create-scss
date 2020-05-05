@@ -72,9 +72,7 @@ A starter template with scss directory structure, dependencies, scripts for deve
 npm i create-scss
 ```
 
-You should find a scss directory and a package.json at the root of your project. All depedencies you need to compile you scss are located on **node_modules** folder.
-
-- Add the scripts in cs-scripts.json to the scripts object in your package.json file.
+You should find a scss directory and a cs-scripts.json at the root of your project. All depedencies you need to compile you scss are located on **node_modules** folder.
 
 #### Dependencies installed with this package
 
@@ -86,7 +84,21 @@ You should find a scss directory and a package.json at the root of your project.
 
 ## Usage
 
-After the installation you can use any tool to compile your sass into css, but if you want to make the best out of this pacakge, use the scripts below.
+After the installation you can use any tool to compile your sass into css, but if you want to make the best out of this package, use the scripts below.
+
+Make sure you copied the commands you found in cs-scripts.json inside your package.json. It should look like this:
+
+```bash
+
+"scripts": {
+    "watch": "node-sass scss/main.scss css/style.css --watch",
+    "compile": "node-sass scss/main.scss css/style.comp.css",
+    "prefix": "postcss css/style.comp.css --use autoprefixer -b 'last 4 versions' -o css/style.prefix.css",
+    "compress": "node-sass css/style.prefix.css css/style.mini.css --output-style compressed",
+    "build": "npm-run-all compile prefix compress",
+    "postinstall": "node postinstall.js"
+  },
+```
 
 ##### To compile your scss into css run everytime you save run the command
 
@@ -111,7 +123,7 @@ npm run build
 
 ## Version
 
-### 2.2.1
+### 2.2.2
 
 - Prevent package.json to be overwrited by installation
 
