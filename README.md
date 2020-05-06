@@ -69,6 +69,10 @@ A starter template with scss directory structure, dependencies, scripts for deve
 ## Installation
 
 ```bash
+npm init -y
+```
+
+```bash
 npm i create-scss
 ```
 
