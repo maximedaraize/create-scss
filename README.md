@@ -68,6 +68,8 @@ A starter template with scss directory structure, dependencies, scripts for deve
 
 ## Installation
 
+`package.json` is **require**
+
 ```bash
 npm init -y
 ```
@@ -76,7 +78,7 @@ npm init -y
 npm i create-scss
 ```
 
-You should find a scss directory and a cs-scripts.json at the root of your project. All depedencies you need to compile you scss are located on **node_modules** folder.
+You should find a scss directory at the root of your project. All depedencies you need to compile you scss are located on **node_modules** folder.
 
 #### Dependencies installed with this package
 
@@ -90,54 +92,74 @@ You should find a scss directory and a cs-scripts.json at the root of your proje
 
 After the installation you can use any tool to compile your sass into css, but if you want to make the best out of this package, use the scripts below.
 
-Make sure you copied the commands you found in cs-scripts.json inside your package.json. It should look like this:
-
-```bash
-
-"scripts": {
-    "watch": "node-sass scss/main.scss css/style.css --watch",
-    "compile": "node-sass scss/main.scss css/style.comp.css",
-    "prefix": "postcss css/style.comp.css --use autoprefixer -b 'last 4 versions' -o css/style.prefix.css",
-    "compress": "node-sass css/style.prefix.css css/style.mini.css --output-style compressed",
-    "build": "npm-run-all compile prefix compress",
-    "postinstall": "node postinstall.js"
-  },
-```
-
-##### To compile your scss into css run everytime you save run the command
+##### Compile your scss into css run everytime you save run the command
 
 ```bash
 //output style.css
-npm run watch
+npm run cs-watch
 ```
 
-##### To compile your scss into css run the command
+##### Compile your scss into css run the command
 
 ```bash
 //output style.comp.css
-npm run compile
+npm run cs-compile
 ```
 
-##### To make your css ready for production (it will compile, prefix and compress your scss).
+##### Make your css ready for production (it will compile, prefix and compress your scss).
 
 ```bash
 //output style.mini.css
-npm run build
+npm run cs-build
+```
+
+## Change name of commands
+
+By default the commands are prefixed with \*`cs-` to make sure it wont overwrite others scripts inside your `package.json`
+
+You can remove that prefix or rename the commands in the `package.json` to suit your need.
+
+#### default
+
+```bash
+"scripts": {
+    "cs-watch": "node-sass scss/main.scss css/style.css --watch",
+    "cs-compile": "node-sass scss/main.scss css/style.comp.css",
+    "cs-prefix": "postcss css/style.comp.css --use autoprefixer -b 'last 4 versions' -o css/style.prefix.css",
+    "cs-compress": "node-sass css/style.prefix.css css/style.mini.css --output-style compressed",
+    "cs-build": "npm-run-all cs-compile cs-prefix cs-compress"
+  },
+```
+
+#### Example of custom name
+
+```bash
+"scripts": {
+    "new-command-1": "node-sass scss/main.scss css/style.css --watch",
+    "new-command-2": "node-sass scss/main.scss css/style.comp.css",
+    "new-command-3": "postcss css/style.comp.css --use autoprefixer -b 'last 4 versions' -o css/style.prefix.css",
+    "new-command-4": "node-sass css/style.prefix.css css/style.mini.css --output-style compressed",
+    "new-command-5": "npm-run-all new-command-2 new-command-3 new-command-4"
+  },
 ```
 
 ## Version
 
+### 2.4.0
+
+- Add commands to compile your `sass in css` directly to your package.json, no more copy-pasting require to start working on your project :+1:
+
 ### 2.2.2
 
-- Prevent package.json to be overwrited by installation
+- Prevent package.json to be overwrited by installation :wink:
 
 ### 2.1.2
 
-- minor fixes
+- minor fixes :zap:
 
 ### 2.1.1
 
-- minor fixes
+- minor fixes :zap:
 
 ### 2.1.0
 

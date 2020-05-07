@@ -1,9 +1,0 @@
-{
-  "scripts": {
-    "watch": "node-sass scss/main.scss css/style.css --watch",
-    "compile": "node-sass scss/main.scss css/style.comp.css",
-    "prefix": "postcss css/style.comp.css --use autoprefixer -b 'last 4 versions' -o css/style.prefix.css",
-    "compress": "node-sass css/style.prefix.css css/style.mini.css --output-style compressed",
-    "build": "npm-run-all compile prefix compress"
-  }
-}
