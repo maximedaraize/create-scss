@@ -6,13 +6,21 @@ const fs = require("fs-extra");
 // Async/Await:
 async function copyFiles() {
   try {
-    await fs.copy("scss", "../../scss");
+    await fs.copy("scss", "../../scss", { overwrite: false, errorOnExist: true });
     console.log(
-      "\x1b[45m",
-      "Awesome, it worked! You are now ready to code something beautiful"
+      "\x1b[32m",
+      "Awesome! A new scss folder was added to your project. You are now ready to code something beautiful"
     );
-  } catch (err) {
-    console.error(err);
+    return true;
+  } catch (error) {
+    if (error.message.includes('already exists')) {
+      console.log(
+        "\x1b[36m",
+        "scss folder already exist. Complementary files were added to it. Happy coding"
+      );
+      return false;
+    }
+    throw error;
   }
 }
 
