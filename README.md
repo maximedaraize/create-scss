@@ -67,8 +67,9 @@ A starter template with scss directory structure, dependencies, scripts for deve
 ```
 
 ## Installation
+`node js` is required -> [download](https://nodejs.org/en/)
 
-`package.json` is **require**
+`package.json` is **require** in your project
 
 ```bash
 npm init -y
@@ -91,6 +92,8 @@ You should find a scss directory at the root of your project. All depedencies yo
 ## Usage
 
 After the installation you can use any tool to compile your sass into css, but if you want to make the best out of this package, use the scripts below.
+
+Make sure all your **scss** files are imported in your `main.scss`
 
 ##### Compile your scss into css run everytime you save run the command
 
@@ -144,6 +147,12 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
 ```
 
 ## Version
+
+### 2.5.0
+
+- Installing the package will not overwrite existing `scss` folder in your project 👏 
+- If you **do not** have a `scss` folder, it will be added with the full starter structure 🗂
+- If you **already have** a `scss` folder, it will simply added files from the starter structure to it 📄
 
 ### 2.4.0
 
