@@ -146,7 +146,7 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
   },
 ```
 
-## 💡 Version
+## 💡 Versions
 
 ### 2.5.1
 
