@@ -18,7 +18,7 @@ A starter template with scss directory structure, dependencies, scripts for deve
 4. [Version](#version)
 5. [Contribution and support](#contribution)
 
-## Structure
+## 🗂 Structure
 
 ```bash
      scss
@@ -66,7 +66,7 @@ A starter template with scss directory structure, dependencies, scripts for deve
 
 ```
 
-## Installation
+## ✨ Installation
 `node js` is required -> [download](https://nodejs.org/en/)
 
 `package.json` is **require** in your project
@@ -89,7 +89,7 @@ You should find a scss directory at the root of your project. All depedencies yo
 - [npm-run-all](https://www.npmjs.com/package/npm-run-all)
 - [fs-extra](https://www.npmjs.com/package/fs-extra)
 
-## Usage
+## 🧑‍💻 Usage
 
 After the installation you can use any tool to compile your sass into css, but if you want to make the best out of this package, use the scripts below.
 
@@ -116,7 +116,7 @@ npm run cs-compile
 npm run cs-build
 ```
 
-## Change name of commands
+## 💾 Changing name of commands
 
 By default the commands are prefixed with \*`cs-` to make sure it wont overwrite others scripts inside your `package.json`
 
@@ -146,7 +146,11 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
   },
 ```
 
-## Version
+## 💡 Version
+
+### 2.5.1
+
+- Add [normalize.css](https://github.com/necolas/normalize.css/) in the _reset.scss partial
 
 ### 2.5.0
 
@@ -177,13 +181,13 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
 - Rename \_progressbar.scss by \_progress.scss
 - Reorganize main.scss
 
-## Contribution
+## 🎈 Contribution
 
 If you want to contribute to this project go to the [create-scss repo](https://github.com/maximedaraize/create-scss/issues) and open an issue :v:
 
 Show your support be giving a :star: on [Github](https://github.com/maximedaraize/create-scss)
 
-## Author
+## 🙋‍♂️ Author
 
 #### Maxime Daraize
 
