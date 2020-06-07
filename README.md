@@ -1,14 +1,18 @@
-![create scss logo](https://res.cloudinary.com/mdaraize/image/upload/c_scale,q_100,w_508/v1588286427/Logo-maxime_E2_hspxgq.svg)
+![create scss logo](https://res.cloudinary.com/mdaraize/image/upload/v1590864320/create-scss-logo_black.svg)
 
 </br>
 
 ![npm version](https://img.shields.io/npm/v/create-scss)
 ![npm license](https://img.shields.io/npm/l/create-scss?color=%2321bab3)
-![npm downloads](https://img.shields.io/npm/dm/create-scss)
+![npm downloads](https://img.shields.io/npm/dt/create-scss)
 
 ### A quick and easy way to add a scss directory structure to your projet :zap:
 
-A starter template with scss directory structure, dependencies, scripts for developement and production.
+A starter template with scss directory structure, dependencies, scripts for developement and production. </br>
+
+### Website
+
+For more information on this package visit [createscss.com](https://www.createscss.com)
 
 ## Table of Contents
 
@@ -67,6 +71,7 @@ A starter template with scss directory structure, dependencies, scripts for deve
 ```
 
 ## ✨ Installation
+
 `node js` is required -> [download](https://nodejs.org/en/)
 
 `package.json` is **require** in your project
@@ -148,13 +153,17 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
 
 ## 💡 Versions
 
+### 2.5.2
+
+- Update documentation
+
 ### 2.5.1
 
-- Add [normalize.css](https://github.com/necolas/normalize.css/) in the _reset.scss partial
+- Add [normalize.css](https://github.com/necolas/normalize.css/) in the \_reset.scss partial
 
 ### 2.5.0
 
-- Installing the package will not overwrite existing `scss` folder in your project 👏 
+- Installing the package will not overwrite existing `scss` folder in your project 👏
 - If you **do not** have a `scss` folder, it will be added with the full starter structure 🗂
 - If you **already have** a `scss` folder, it will simply added files from the starter structure to it 📄
 
