@@ -1,14 +1,18 @@
-![create scss logo](https://res.cloudinary.com/mdaraize/image/upload/c_scale,q_100,w_508/v1588286427/Logo-maxime_E2_hspxgq.svg)
+![create scss logo](https://res.cloudinary.com/mdaraize/image/upload/v1590864320/create-scss-logo_black.svg)
 
 </br>
 
 ![npm version](https://img.shields.io/npm/v/create-scss)
 ![npm license](https://img.shields.io/npm/l/create-scss?color=%2321bab3)
-![npm downloads](https://img.shields.io/npm/dm/create-scss)
+![npm downloads](https://img.shields.io/npm/dt/create-scss)
 
 ### A quick and easy way to add a scss directory structure to your projet :zap:
 
-A starter template with scss directory structure, dependencies, scripts for developement and production.
+A starter template with scss directory structure, dependencies, scripts for developement and production. </br>
+
+### Website
+
+For more information on this package visit [createscss.com](https://www.createscss.com)
 
 ## Table of Contents
 
@@ -18,7 +22,7 @@ A starter template with scss directory structure, dependencies, scripts for deve
 4. [Version](#version)
 5. [Contribution and support](#contribution)
 
-## Structure
+## 🗂 Structure
 
 ```bash
      scss
@@ -66,7 +70,8 @@ A starter template with scss directory structure, dependencies, scripts for deve
 
 ```
 
-## Installation
+## ✨ Installation
+
 `node js` is required -> [download](https://nodejs.org/en/)
 
 `package.json` is **require** in your project
@@ -89,7 +94,7 @@ You should find a scss directory at the root of your project. All depedencies yo
 - [npm-run-all](https://www.npmjs.com/package/npm-run-all)
 - [fs-extra](https://www.npmjs.com/package/fs-extra)
 
-## Usage
+## 🧑‍💻 Usage
 
 After the installation you can use any tool to compile your sass into css, but if you want to make the best out of this package, use the scripts below.
 
@@ -116,7 +121,7 @@ npm run cs-compile
 npm run cs-build
 ```
 
-## Change name of commands
+## 💾 Changing name of commands
 
 By default the commands are prefixed with \*`cs-` to make sure it wont overwrite others scripts inside your `package.json`
 
@@ -146,11 +151,19 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
   },
 ```
 
-## Version
+## 💡 Versions
+
+### 2.5.2
+
+- Update documentation
+
+### 2.5.1
+
+- Add [normalize.css](https://github.com/necolas/normalize.css/) in the \_reset.scss partial
 
 ### 2.5.0
 
-- Installing the package will not overwrite existing `scss` folder in your project 👏 
+- Installing the package will not overwrite existing `scss` folder in your project 👏
 - If you **do not** have a `scss` folder, it will be added with the full starter structure 🗂
 - If you **already have** a `scss` folder, it will simply added files from the starter structure to it 📄
 
@@ -177,13 +190,13 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
 - Rename \_progressbar.scss by \_progress.scss
 - Reorganize main.scss
 
-## Contribution
+## 🎈 Contribution
 
 If you want to contribute to this project go to the [create-scss repo](https://github.com/maximedaraize/create-scss/issues) and open an issue :v:
 
 Show your support be giving a :star: on [Github](https://github.com/maximedaraize/create-scss)
 
-## Author
+## 🙋‍♂️ Author
 
 #### Maxime Daraize
 
