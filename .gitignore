@@ -2,3 +2,4 @@
 node_modules
 checklist.txt
 asset
+.npmrc

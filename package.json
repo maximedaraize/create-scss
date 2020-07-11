@@ -1,5 +1,5 @@
 {
-  "name": "create-scss",
+  "name": "@maximedaraize/create-scss",
   "version": "2.5.2",
   "description": "A quick and easy way to add a scss directory structure to your projet. Use this package to get a scss directory structure, tools and commands for developement",
   "main": "index.js",
