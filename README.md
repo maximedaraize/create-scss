@@ -153,6 +153,10 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
 
 ## Versions
 
+### 2.5.4
+
+- Remove duplicate of `@import "components/table";` in main.scss
+
 ### 2.5.3
 
 - Update documentation + add page to github registry
