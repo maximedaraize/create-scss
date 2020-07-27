@@ -1,6 +1,6 @@
 {
   "name": "create-scss",
-  "version": "2.5.2",
+  "version": "2.5.4",
   "description": "A quick and easy way to add a scss directory structure to your projet. Use this package to get a scss directory structure, tools and commands for developement",
   "main": "index.js",
   "dependencies": {
@@ -11,7 +11,12 @@
     "postcss-cli": "^7.1.0"
   },
   "scripts": {
-    "postinstall": "node postinstall.js"
+    "postinstall": "node postinstall.js",
+    "cs-watch": "node-sass scss/main.scss css/style.css --watch",
+    "cs-compile": "node-sass scss/main.scss css/style.comp.css",
+    "cs-prefix": "postcss css/style.comp.css --use autoprefixer -b 'last 4 versions' -o css/style.prefix.css",
+    "cs-compress": "node-sass css/style.prefix.css css/style.mini.css --output-style compressed",
+    "cs-build": "npm-run-all cs-compile cs-prefix cs-compress"
   },
   "repository": {
     "type": "git",

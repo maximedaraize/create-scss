@@ -8,21 +8,17 @@
 
 ### A quick and easy way to add a scss directory structure to your projet :zap:
 
-A starter template with scss directory structure, dependencies, scripts for developement and production. </br>
-
-### Website
-
-For more information on this package visit [createscss.com](https://www.createscss.com)
+A starter template with scss directory structure, dependencies, scripts for developement and production.
 
 ## Table of Contents
 
 1. [Structure](#structure)
 2. [Installation](#installation)
 3. [Usage](#usage)
-4. [Version](#version)
+4. [Versions](#versions)
 5. [Contribution and support](#contribution)
 
-## 🗂 Structure
+## Structure
 
 ```bash
      scss
@@ -70,7 +66,7 @@ For more information on this package visit [createscss.com](https://www.createsc
 
 ```
 
-## ✨ Installation
+## Installation
 
 `node js` is required -> [download](https://nodejs.org/en/)
 
@@ -94,7 +90,7 @@ You should find a scss directory at the root of your project. All depedencies yo
 - [npm-run-all](https://www.npmjs.com/package/npm-run-all)
 - [fs-extra](https://www.npmjs.com/package/fs-extra)
 
-## 🧑‍💻 Usage
+## Usage
 
 After the installation you can use any tool to compile your sass into css, but if you want to make the best out of this package, use the scripts below.
 
@@ -121,7 +117,7 @@ npm run cs-compile
 npm run cs-build
 ```
 
-## 💾 Changing name of commands
+## Changing name of commands
 
 By default the commands are prefixed with \*`cs-` to make sure it wont overwrite others scripts inside your `package.json`
 
@@ -151,7 +147,15 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
   },
 ```
 
-## 💡 Versions
+## Versions
+
+### 2.5.4
+
+- Remove duplicate of `@import "components/table";` in main.scss
+
+### 2.5.3
+
+- Update documentation + add page to github registry
 
 ### 2.5.2
 
@@ -190,7 +194,7 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
 - Rename \_progressbar.scss by \_progress.scss
 - Reorganize main.scss
 
-## 🎈 Contribution
+## Contribution
 
 If you want to contribute to this project go to the [create-scss repo](https://github.com/maximedaraize/create-scss/issues) and open an issue :v:
 
