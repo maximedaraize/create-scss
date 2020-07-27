@@ -8,11 +8,7 @@
 
 ### A quick and easy way to add a scss directory structure to your projet :zap:
 
-A starter template with scss directory structure, dependencies, scripts for developement and production. </br>
-
-### Website
-
-For more information on this package visit [createscss.com](https://www.createscss.com)
+A starter template with scss directory structure, dependencies, scripts for developement and production.
 
 ## Table of Contents
 
