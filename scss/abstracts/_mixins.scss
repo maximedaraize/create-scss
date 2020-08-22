@@ -44,12 +44,12 @@
 @mixin for($size) {
   //under 480px
   @if $size == mobile-only {
-    @media (max-width: 480px) {
+    @media (max-width: 479px) {
       @content;
     }
     //over 481px
   } @else if $size == mobile {
-    @media (min-width: 481px) {
+    @media (min-width: 480px) {
       @content;
     }
     //under 767px
@@ -72,9 +72,9 @@
     @media (min-width: 992px) {
       @content;
     }
-    //between 992px and 1199px
+    //over 1199px
   } @else if $size == large-only {
-    @media (min-width: 992px) and (max-width: 1199px) {
+    @media (max-width: 1199px) {
       @content;
     }
     //over 1200px
@@ -82,9 +82,5 @@
     @media (min-width: 1200px) {
       @content;
     }
-  } @else if $size == mobile-only-medium-only {
-    @media (max-width: 480px), (min-width: 992px) and (max-width: 1199px) {
-      @content;
-    }
-  }
+  } 
 }
