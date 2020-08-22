@@ -1,3 +1,49 @@
 //============
-// Functions
+// Helper
 //============
+
+/* Add an element with the css class .responsive-helper
+ * in your html document to have an indicator at the
+ * bottom of your screen of witch breakpoint you are in.
+*/
+
+.responsive-helper {
+    position: fixed;
+    right: 0;
+    bottom: 1rem;
+    color: transparent;
+  
+    &:before {
+      content: 'large';
+      color: #fff;
+      font-weight: 700;
+      border-radius: 7px;
+      background: #000;
+      padding: 1rem 2rem;
+    }
+  
+    @include for(large-only) {
+      &:before {
+        content: 'large-only';
+      }
+    }
+  
+    @include for(medium-only) {
+      &:before {
+        content: 'medium-only';
+      }
+    }
+  
+    @include for(small-only) {
+      &:before {
+        content: 'small-only';
+      }
+    }
+  
+    @include for(mobile-only) {
+      &:before {
+        content: 'mobile-only';
+      }
+    }
+  }
+  
