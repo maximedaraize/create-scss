@@ -149,6 +149,14 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
 
 ## Versions
 
+### 2.5.5
+
+- Add responsive helper to create an breakpoint indicator inside your markup file. To use it add the snippet below to you html document.
+```html
+<span class="responsive-helper"></span>
+```
+- Clean breakpoint mixin in mixins.scss
+
 ### 2.5.4
 
 - Remove duplicate of `@import "components/table";` in main.scss
