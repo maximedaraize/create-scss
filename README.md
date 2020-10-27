@@ -84,7 +84,7 @@ You should find a scss directory at the root of your project. All depedencies yo
 
 #### Dependencies installed with this package
 
-- [node-sass](https://www.npmjs.com/package/node-sass)
+- [sass](https://www.npmjs.com/package/sass)
 - [postcss-cli](https://www.npmjs.com/package/postcss-cli)
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer)
 - [npm-run-all](https://www.npmjs.com/package/npm-run-all)
@@ -149,12 +149,20 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
 
 ## Versions
 
+### 2.6.0
+
+- Replace deprecated node-sass/LibSass \*[source](https://sass-lang.com/blog/libsass-is-deprecated).
+- Add sass using [dart-sass](https://github.com/sass/dart-sass)
+- Change scripts in package.json to match new sass librairy
+
 ### 2.5.5
 
 - Add responsive helper to create an breakpoint indicator inside your markup file. To use it add the snippet below to you html document.
+
 ```html
 <span class="responsive-helper"></span>
 ```
+
 - Clean breakpoint mixin in mixins.scss
 
 ### 2.5.4
