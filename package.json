@@ -1,6 +1,6 @@
 {
   "name": "create-scss",
-  "version": "2.5.5",
+  "version": "2.6.0",
   "description": "A quick and easy way to add a scss directory structure to your projet. Use this package to get a scss directory structure, tools and commands for developement",
   "main": "index.js",
   "dependencies": {
