@@ -16,7 +16,7 @@
     "cs-compile": "sass scss/main.scss css/style.css --no-source-map",
     "cs-compress": "sass scss/main.scss css/style.css --style=compressed --no-source-map",
     "cs-prefix": "postcss css/style.css -o css/style.css --use autoprefixer -b 'last 4 versions' --no-source-map",
-    "cs-build": "npm-run-all cs-compile cs-compress cs-prefix "
+    "cs-build": "npm-run-all cs-compile cs-compress cs-prefix"
   },
   "repository": {
     "type": "git",
