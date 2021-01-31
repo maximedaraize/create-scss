@@ -40,47 +40,28 @@
 }
 
 //BREAKPOINTS
+$small: 600px;
+$medium: 1024px;
+$large: 1440px;
+$xlarge: 1920px;
 
-@mixin for($size) {
-  //under 480px
-  @if $size == mobile-only {
-    @media (max-width: 479px) {
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == small {
+    @media (min-width: $small) {
       @content;
     }
-    //over 481px
-  } @else if $size == mobile {
-    @media (min-width: 480px) {
+  } @else if $breakpoint == medium {
+    @media (min-width: $medium) {
       @content;
     }
-    //under 767px
-  } @else if $size == small-only {
-    @media (max-width: 767px) {
+  } @else if $breakpoint == large {
+    @media (min-width: $large) {
       @content;
     }
-    //over 768px
-  } @else if $size == small {
-    @media (min-width: 768px) {
+  }
+  @else if $breakpoint == xlarge {
+    @media (min-width: $xlarge) {
       @content;
     }
-    //under 991px
-  } @else if $size == medium-only {
-    @media (max-width: 991px) {
-      @content;
-    }
-    //over 992px
-  } @else if $size == medium {
-    @media (min-width: 992px) {
-      @content;
-    }
-    //over 1199px
-  } @else if $size == large-only {
-    @media (max-width: 1199px) {
-      @content;
-    }
-    //over 1200px
-  } @else if $size == large {
-    @media (min-width: 1200px) {
-      @content;
-    }
-  } 
+  }
 }
