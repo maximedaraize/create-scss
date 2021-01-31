@@ -146,6 +146,56 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
 
 ## Versions
 
+### 2.7.0
+- Simplify breakpoints, with mobile first approach
+- path: `scss/abstracts/_mixins.scss`
+- code example: 
+```
+#mixin
+$small: 600px;
+$medium: 1024px;
+$large: 1440px;
+$xlarge: 1920px;
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == small {
+    @media (min-width: $small) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (min-width: $medium) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (min-width: $large) {
+      @content;
+    }
+  }
+  @else if $breakpoint == xlarge {
+    @media (min-width: $xlarge) {
+      @content;
+    }
+  }
+}
+
+#usage
+body {
+  background:red;
+  @include breakpoint(small){
+    background:green;
+  }
+  @include breakpoint(medium){
+    background:blue;
+  }
+  @include breakpoint(large){
+    background:orange;
+  }
+  @include breakpoint(xlarge){
+    background:pink;
+  }
+}
+```
+
 ### 2.6.1
 
 - Add support to documentation
