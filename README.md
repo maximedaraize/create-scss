@@ -146,6 +146,12 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
 
 ## Versions
 
+### 2.7.1
+- Adapt responsive helper to match new breakpoints strategy
+- Change class from `responsive-helper` to `debug`
+- Change some css that affect the visual of the helper
+- Now showing visual feedback of (small, medium, large and xlarge)
+
 ### 2.7.0
 - Simplify breakpoints, with mobile first approach
 - path: `scss/abstracts/_mixins.scss`

@@ -7,42 +7,36 @@
  * bottom of your screen of witch breakpoint you are in.
 */
 
-.responsive-helper {
-    position: fixed;
-    right: 0;
-    bottom: 1rem;
-    color: transparent;
-  
+.debug {
+    
     &:before {
-      content: 'large';
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      content: 'Small';
+      font-family: sans-serif;
+      letter-spacing: 0.05rem;
       color: #fff;
       font-weight: 700;
-      border-radius: 7px;
       background: #000;
       padding: 1rem 2rem;
     }
-  
-    @include for(large-only) {
+    
+    @include breakpoint(medium) {
       &:before {
-        content: 'large-only';
+        content: 'medium';
       }
     }
   
-    @include for(medium-only) {
+    @include breakpoint(large) {
       &:before {
-        content: 'medium-only';
+        content: 'large';
       }
     }
   
-    @include for(small-only) {
+    @include breakpoint(xlarge) {
       &:before {
-        content: 'small-only';
-      }
-    }
-  
-    @include for(mobile-only) {
-      &:before {
-        content: 'mobile-only';
+        content: 'xlarge';
       }
     }
   }
