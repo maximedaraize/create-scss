@@ -84,7 +84,7 @@ You should find a scss directory at the root of your project. All depedencies yo
 
 #### Dependencies installed with this package
 
-- [node-sass](https://www.npmjs.com/package/node-sass)
+- [sass](https://www.npmjs.com/package/sass)
 - [postcss-cli](https://www.npmjs.com/package/postcss-cli)
 - [autoprefixer](https://www.npmjs.com/package/autoprefixer)
 - [npm-run-all](https://www.npmjs.com/package/npm-run-all)
@@ -96,24 +96,21 @@ After the installation you can use any tool to compile your sass into css, but i
 
 Make sure all your **scss** files are imported in your `main.scss`
 
-##### Compile your scss into css run everytime you save run the command
+##### Compile your scss into css, everytime you save
 
 ```bash
-//output style.css
 npm run cs-watch
 ```
 
-##### Compile your scss into css run the command
+##### Compile your scss into css once
 
 ```bash
-//output style.comp.css
 npm run cs-compile
 ```
 
 ##### Make your css ready for production (it will compile, prefix and compress your scss).
 
 ```bash
-//output style.mini.css
 npm run cs-build
 ```
 
@@ -127,11 +124,11 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
 
 ```bash
 "scripts": {
-    "cs-watch": "node-sass scss/main.scss css/style.css --watch",
-    "cs-compile": "node-sass scss/main.scss css/style.comp.css",
-    "cs-prefix": "postcss css/style.comp.css --use autoprefixer -b 'last 4 versions' -o css/style.prefix.css",
-    "cs-compress": "node-sass css/style.prefix.css css/style.mini.css --output-style compressed",
-    "cs-build": "npm-run-all cs-compile cs-prefix cs-compress"
+    "cs-watch": "sass scss/main.scss css/style.css --watch --no-source-map",
+    "cs-compile": "sass scss/main.scss css/style.css --no-source-map",
+    "cs-compress": "sass scss/main.scss css/style.css --style=compressed --no-source-map",
+    "cs-prefix": "postcss css/style.css -o css/style.css --use autoprefixer -b 'last 4 versions' --no-source-map",
+    "cs-build": "npm-run-all cs-compile cs-compress cs-prefix"
   },
 ```
 
@@ -139,15 +136,91 @@ You can remove that prefix or rename the commands in the `package.json` to suit 
 
 ```bash
 "scripts": {
-    "new-command-1": "node-sass scss/main.scss css/style.css --watch",
-    "new-command-2": "node-sass scss/main.scss css/style.comp.css",
-    "new-command-3": "postcss css/style.comp.css --use autoprefixer -b 'last 4 versions' -o css/style.prefix.css",
-    "new-command-4": "node-sass css/style.prefix.css css/style.mini.css --output-style compressed",
-    "new-command-5": "npm-run-all new-command-2 new-command-3 new-command-4"
+    "dev": "sass scss/main.scss css/style.css --watch --no-source-map",
+    "compile": "sass scss/main.scss css/style.css --no-source-map",
+    "minify": "sass scss/main.scss css/style.css --style=compressed --no-source-map",
+    "add-prefixes": "postcss css/style.css -o css/style.css --use autoprefixer -b 'last 4 versions' --no-source-map",
+    "production": "npm-run-all cs-compile cs-compress cs-prefix"
   },
 ```
 
 ## Versions
+
+### 2.7.1
+- Adapt responsive helper to match new breakpoints strategy
+- Change class from `responsive-helper` to `debug`
+- Change some css that affect the visual of the helper
+- Now showing visual feedback of (small, medium, large and xlarge)
+
+### 2.7.0
+- Simplify breakpoints, with mobile first approach
+- path: `scss/abstracts/_mixins.scss`
+- code example: 
+```
+#mixin
+$small: 600px;
+$medium: 1024px;
+$large: 1440px;
+$xlarge: 1920px;
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == small {
+    @media (min-width: $small) {
+      @content;
+    }
+  } @else if $breakpoint == medium {
+    @media (min-width: $medium) {
+      @content;
+    }
+  } @else if $breakpoint == large {
+    @media (min-width: $large) {
+      @content;
+    }
+  }
+  @else if $breakpoint == xlarge {
+    @media (min-width: $xlarge) {
+      @content;
+    }
+  }
+}
+
+#usage
+body {
+  background:red;
+  @include breakpoint(small){
+    background:green;
+  }
+  @include breakpoint(medium){
+    background:blue;
+  }
+  @include breakpoint(large){
+    background:orange;
+  }
+  @include breakpoint(xlarge){
+    background:pink;
+  }
+}
+```
+
+### 2.6.1
+
+- Add support to documentation
+
+### 2.6.0
+
+- Replace deprecated node-sass/LibSass \*[source](https://sass-lang.com/blog/libsass-is-deprecated).
+- Add sass using [dart-sass](https://github.com/sass/dart-sass)
+- Change scripts in package.json to match new sass librairy
+
+### 2.5.5
+
+- Add responsive helper to create an breakpoint indicator inside your markup file. To use it add the snippet below to you html document.
+
+```html
+<span class="responsive-helper"></span>
+```
+
+- Clean breakpoint mixin in mixins.scss
 
 ### 2.5.4
 
