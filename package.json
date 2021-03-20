@@ -14,8 +14,7 @@
     "sass": "^1.27.0"
   },
   "scripts": {
-    "go": "node questions.js",
-    "postinstall": "node postinstall.js && node questions.js",
+    "postinstall": "node questions.js",
     "cs-watch": "sass scss/main.scss css/style.css --watch --no-source-map",
     "cs-compile": "sass scss/main.scss css/style.css --no-source-map",
     "cs-compress": "sass scss/main.scss css/style.css --style=compressed --no-source-map",
