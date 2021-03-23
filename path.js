@@ -36,14 +36,3 @@ inquirer
 
     copyFiles();
   });
-
-  if (!json.hasOwnProperty('scripts')) {
-    json.scripts = {};
-  }
-  
-  json.scripts['cs-watch'] = 'sass scss/main.scss css/style.css --watch --no-source-map';
-  json.scripts['cs-compile'] = 'sass scss/main.scss css/style.css --no-source-map';
-  json.scripts['cs-compress'] = 'sass scss/main.scss css/style.css --style=compressed --no-source-map';
-  json.scripts['cs-prefix'] = "postcss css/style.css -o css/style.css --use autoprefixer -b 'last 4 versions' --no-source-map";
-  json.scripts['cs-build'] = 'npm-run-all cs-compile cs-compress cs-prefix';
-  saveFile(pkgJsonPath, JSON.stringify(json, null, 2));
