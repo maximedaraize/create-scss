@@ -143,10 +143,14 @@ inquirer
     if (!json.hasOwnProperty("scripts")) {
       json.scripts = {};
     }
-    if (answer.scss_path === "./") {
+
+    if (answer.scss_path.endsWith("./")) {
       answer.scss_path = "";
       slash = "";
-    } //if user choose root level
+    } else if (answer.scss_path.endsWith("/")) {
+      slash = "";
+    }
+
     json.scripts[
       "cs-watch"
     ] = `sass ${answer.scss_path}${slash}scss/main.scss ${answer.scss_path}${slash}css/style.css --watch --no-source-map`;
