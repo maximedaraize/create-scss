@@ -80,11 +80,22 @@ inquirer
 
                 let dataArray = data.split("\n"); // convert file data in an array
                 let searchKeyword = Object.values(answer.folder); // we are looking for a line, contains, key word choose by the user
+                let searchKeywords = Object.values(answer.folder); // we are looking for a line, contains, key word choose by the user
                 // let lastIndex = -1; // let say, we have not found the keyword
 
-                let result = dataArray.filter(function (el) {
-                  return !searchKeyword.includes(el);
+                //create array of regex
+                //Add /string/i for each value
+                for(var i=0;i<searchKeywords.length;i++){
+                    searchKeywords[i] = `/${searchKeywords[i]}/i`;
+                }
+                console.log(searchKeywords)
+
+                let result = dataArray.filter(function (dataItem) { //fonction trouver le moyen de convertir array searchWords en array de regex (retirer les quotes)
+                  return !searchKeywords.some(function (regex) {
+                             return regex.test(dataItem);
+                        });
                 });
+              console.log(result)
 
                 // UPDATE FILE WITH NEW DATA
                 let updateFile = result.join("\n");
@@ -143,7 +154,7 @@ inquirer
     } else if (answer.scss_path.endsWith("/")) {
       slash = "";
     }
-    
+
     json.scripts[ "cs-watch"    ] = `sass ${answer.scss_path}${slash}scss/main.scss ${answer.scss_path}${slash}css/style.css --watch`;
     json.scripts["cs-build"] = `sass ${answer.scss_path}${slash}scss/main.scss ${answer.scss_path}${slash}css/style.css --style=compressed --no-source-map && postcss ${answer.scss_path}${slash}css/style.css -o ${answer.scss_path}${slash}css/style.css --use autoprefixer -b 'last 4 versions'`;
     saveFile(pkgJsonPath, JSON.stringify(json, null, 2));
