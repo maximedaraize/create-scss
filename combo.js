@@ -139,22 +139,26 @@ inquirer
       require.main.paths[0].split("node_modules")[0] + "package.json";
     const json = require(pkgJsonPath);
     console.log("check->" + pkgJsonPath);
-
+    let slash = "/";
     if (!json.hasOwnProperty("scripts")) {
       json.scripts = {};
     }
+    if (answer.scss_path === "./") {
+      answer.scss_path = "";
+      slash = "";
+    } //if user choose root level
     json.scripts[
       "cs-watch"
-    ] = `sass ${answer.scss_path}/scss/main.scss ${answer.scss_path}/css/style.css --watch --no-source-map`;
+    ] = `sass ${answer.scss_path}${slash}scss/main.scss ${answer.scss_path}${slash}css/style.css --watch --no-source-map`;
     json.scripts[
       "cs-compile"
-    ] = `sass ${answer.scss_path}scss/main.scss ${answer.scss_path}/css/style.css --no-source-map`;
+    ] = `sass ${answer.scss_path}${slash}scss/main.scss ${answer.scss_path}${slash}css/style.css --no-source-map`;
     json.scripts[
       "cs-compress"
-    ] = `sass ${answer.scss_path}/scss/main.scss ${answer.scss_path}/css/style.css --style=compressed --no-source-map`;
+    ] = `sass ${answer.scss_path}${slash}scss/main.scss ${answer.scss_path}${slash}css/style.css --style=compressed --no-source-map`;
     json.scripts[
       "cs-prefix"
-    ] = `postcss ${answer.scss_path}/css/style.css -o ${answer.scss_path}/css/style.css --use autoprefixer -b 'last 4 versions' --no-source-map`;
+    ] = `postcss ${answer.scss_path}${slash}css/style.css -o ${answer.scss_path}${slash}css/style.css --use autoprefixer -b 'last 4 versions' --no-source-map`;
     json.scripts["cs-build"] = "npm-run-all cs-compile cs-compress cs-prefix";
     saveFile(pkgJsonPath, JSON.stringify(json, null, 2));
   });
