@@ -79,18 +79,14 @@ inquirer
                 if (err) throw error;
 
                 let dataArray = data.split("\n"); // convert file data in an array
-                let searchKeyword = Object.values(answer.folder); // we are looking for a line, contains, key word 'user1' in the file
+                let searchKeyword = Object.values(answer.folder); // we are looking for a line, contains, key word choose by the user
                 // let lastIndex = -1; // let say, we have not found the keyword
 
                 let result = dataArray.filter(function (el) {
                   return !searchKeyword.includes(el);
                 });
 
-                // myArray = myArray.filter(function (el) {
-                //   return !toRemove.includes(el);
-                // });
-                console.log(result);
-
+                // UPDATE FILE WITH NEW DATA
                 let updateFile = result.join("\n");
                 fs.writeFile("text.txt", updateFile, (err) => {
                   if (err) throw err;
@@ -104,10 +100,6 @@ inquirer
                 //     const updatedData = dataArray.join("\n");
                 //   }
                 // }
-
-                // UPDATE FILE WITH NEW DATA
-                // IN CASE YOU WANT TO UPDATE THE CONTENT IN YOUR FILE
-                // THIS WILL REMOVE THE LINE CONTAINS 'user1' IN YOUR shuffle.txt FILE
               }
             );
           });
@@ -134,6 +126,7 @@ inquirer
     );
     copyFiles();
 
+    // Add script to package.json to compile scss
     const saveFile = require("fs").writeFileSync;
     const pkgJsonPath =
       require.main.paths[0].split("node_modules")[0] + "package.json";
@@ -150,19 +143,8 @@ inquirer
     } else if (answer.scss_path.endsWith("/")) {
       slash = "";
     }
-
-    json.scripts[
-      "cs-watch"
-    ] = `sass ${answer.scss_path}${slash}scss/main.scss ${answer.scss_path}${slash}css/style.css --watch --no-source-map`;
-    json.scripts[
-      "cs-compile"
-    ] = `sass ${answer.scss_path}${slash}scss/main.scss ${answer.scss_path}${slash}css/style.css --no-source-map`;
-    json.scripts[
-      "cs-compress"
-    ] = `sass ${answer.scss_path}${slash}scss/main.scss ${answer.scss_path}${slash}css/style.css --style=compressed --no-source-map`;
-    json.scripts[
-      "cs-prefix"
-    ] = `postcss ${answer.scss_path}${slash}css/style.css -o ${answer.scss_path}${slash}css/style.css --use autoprefixer -b 'last 4 versions' --no-source-map`;
-    json.scripts["cs-build"] = "npm-run-all cs-compile cs-compress cs-prefix";
+    
+    json.scripts[ "cs-watch"    ] = `sass ${answer.scss_path}${slash}scss/main.scss ${answer.scss_path}${slash}css/style.css --watch`;
+    json.scripts["cs-build"] = `sass ${answer.scss_path}${slash}scss/main.scss ${answer.scss_path}${slash}css/style.css --style=compressed --no-source-map && postcss ${answer.scss_path}${slash}css/style.css -o ${answer.scss_path}${slash}css/style.css --use autoprefixer -b 'last 4 versions'`;
     saveFile(pkgJsonPath, JSON.stringify(json, null, 2));
   });
