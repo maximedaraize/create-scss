@@ -52,8 +52,6 @@ inquirer
       console.log(answer.scss_path + "/scss/main.scss")
       try {
         await fs.copy(
-          "node_modules/create-scss/scss",
-          `${answer.scss_path}/scss`,
           {
             overwrite: false,
             errorOnExist: true,
@@ -172,7 +170,7 @@ inquirer
 
     /* Add two scripts two compile scss,
        dependencies to be able to build on deploy
-       and replace create-scss from  dependencies asdevdependencies 
+       and replace create-scss from  dependencies as devdependencies 
        to not reinstall the structure during deploy */   
     json.scripts["cs-watch"] = `sass ${answer.scss_path}${slash}scss/main.scss ${answer.scss_path}${slash}css/style.css --watch`;
     json.scripts["cs-build"] = `sass ${answer.scss_path}${slash}scss/main.scss ${answer.scss_path}${slash}css/style.css --style=compressed --no-source-map && postcss ${answer.scss_path}${slash}css/style.css -o ${answer.scss_path}${slash}css/style.css --use autoprefixer -b 'last 4 versions'`;

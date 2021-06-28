@@ -1,27 +1,22 @@
 {
-  "name": "create-scss",
-  "version": "2.7.1",
+  "name": "@maximedaraize/create-scss",
+  "version": "0.0.14",
   "description": "A quick and easy way to add a scss directory structure to your projet. Use this package to get a scss directory structure, tools and commands for developement",
   "main": "index.js",
   "dependencies": {
     "autoprefixer": "^9.7.4",
     "fs-extra": "^9.0.0",
-    "sass": "^1.27.0",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.0"
+    "glob": "^7.1.6",
+    "inquirer": "^8.0.0",
+    "postcss-cli": "^7.1.0",
+    "sass": "^1.27.0"
   },
   "scripts": {
-    "postinstall": "node postinstall.js",
-    "cs-watch": "sass scss/main.scss css/style.css --watch --no-source-map",
-    "cs-compile": "sass scss/main.scss css/style.css --no-source-map",
-    "cs-compress": "sass scss/main.scss css/style.css --style=compressed --no-source-map",
-    "cs-prefix": "postcss css/style.css -o css/style.css --use autoprefixer -b 'last 4 versions' --no-source-map",
-    "cs-build": "npm-run-all cs-compile cs-compress cs-prefix"
+    "postinstall": "node v4.js",
+    "cs-watch": "sass 1/scss/main.scss 1/css/style.css --watch",
+    "cs-build": "sass 1/scss/main.scss 1/css/style.css --style=compressed --no-source-map && postcss 1/css/style.css -o 1/css/style.css --use autoprefixer -b 'last 4 versions'"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maximedaraize/create-scss"
-  },
+  "repository": {},
   "keywords": [
     "template",
     "css",
@@ -36,8 +31,5 @@
   ],
   "author": "Maxime Daraize",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/maximedaraize/create-scss/issues"
-  },
-  "homepage": "https://www.npmjs.com/package/create-scss"
+  "devdependencies": {}
 }
