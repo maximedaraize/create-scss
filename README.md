@@ -1,5 +1,13 @@
 ![create scss logo](https://res.cloudinary.com/mdaraize/image/upload/v1590864320/create-scss-logo_black.svg)
 
+⚠️⚠️⚠️
+
+**WARNING** create-scss is deprecated. There are no plans to add additional features. 
+
+Projects that still use it should move to [create-scss-cli](https://github.com/maximedaraize/create-scss-cli/tree/main)
+
+⚠️⚠️⚠️
+
 </br>
 
 ![npm version](https://img.shields.io/npm/v/create-scss)
