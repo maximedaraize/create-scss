@@ -4,7 +4,7 @@
 
 **WARNING** create-scss is deprecated. There are no plans to add additional features. 
 
-Projects that still use it should move to [create-scss-cli](https://github.com/maximedaraize/create-scss-cli/tree/main)
+Projects that still use it should move to [create-scss-cli](https://github.com/maximedaraize/create-scss-cli/tree/main) 
 
 ⚠️⚠️⚠️
 
